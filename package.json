@@ -2,7 +2,12 @@
 	"name": "start",
 	"version": "0.0.1",
 	"description": "Tanstack Start project demo",
-	"keywords": ["tanstack", "start", "web", "react"],
+	"keywords": [
+		"tanstack",
+		"start",
+		"web",
+		"react"
+	],
 	"license": "ISC",
 	"author": "Andres Court",
 	"type": "module",
@@ -17,6 +22,7 @@
 		"@prisma/client": "6.5.0",
 		"@radix-ui/react-slot": "^1.1.2",
 		"@tailwindcss/vite": "^4.1.3",
+		"@tanstack/react-form": "^1.3.0",
 		"@tanstack/react-router": "^1.114.34",
 		"@tanstack/react-start": "^1.114.34",
 		"class-variance-authority": "^0.7.1",
