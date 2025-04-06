@@ -1,44 +1,40 @@
 {
-  "name": "start",
-  "version": "0.0.1",
-  "description": "Tanstack Start project demo",
-  "keywords": [
-    "tanstack",
-    "start",
-    "web",
-    "react"
-  ],
-  "license": "ISC",
-  "author": "Andres Court",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.1.2",
-    "@tailwindcss/vite": "^4.1.3",
-    "@tanstack/react-router": "^1.114.34",
-    "@tanstack/react-start": "^1.114.34",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.487.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.1.0",
-    "tailwindcss": "^4.1.3",
-    "tw-animate-css": "^1.2.5",
-    "vinxi": "^0.5.3"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^5.8.3",
-    "vite-tsconfig-paths": "^5.1.4"
-  }
+	"name": "start",
+	"version": "0.0.1",
+	"description": "Tanstack Start project demo",
+	"keywords": ["tanstack", "start", "web", "react"],
+	"license": "ISC",
+	"author": "Andres Court",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vinxi dev",
+		"build": "vinxi build",
+		"start": "vinxi start",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@radix-ui/react-slot": "^1.1.2",
+		"@tailwindcss/vite": "^4.1.3",
+		"@tanstack/react-router": "^1.114.34",
+		"@tanstack/react-start": "^1.114.34",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.487.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"tailwind-merge": "^3.1.0",
+		"tailwindcss": "^4.1.3",
+		"tw-animate-css": "^1.2.5",
+		"vinxi": "^0.5.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.14.0",
+		"@types/react": "^19.1.0",
+		"@types/react-dom": "^19.1.1",
+		"@vitejs/plugin-react": "^4.3.4",
+		"typescript": "^5.8.3",
+		"vite-tsconfig-paths": "^5.1.4"
+	}
 }
