@@ -2,12 +2,7 @@
 	"name": "start",
 	"version": "0.0.1",
 	"description": "Tanstack Start project demo",
-	"keywords": [
-		"tanstack",
-		"start",
-		"web",
-		"react"
-	],
+	"keywords": ["tanstack", "start", "web", "react"],
 	"license": "ISC",
 	"author": "Andres Court",
 	"type": "module",
