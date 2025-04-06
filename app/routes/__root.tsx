@@ -6,6 +6,7 @@ import {
 } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 
+import Header from '@/components/Header'
 import appStyles from '@/style.css?url'
 
 export const Route = createRootRoute({
@@ -39,6 +40,7 @@ export const Route = createRootRoute({
 function RootComponent() {
 	return (
 		<RootDocument>
+			<Header />
 			<Outlet />
 		</RootDocument>
 	)
