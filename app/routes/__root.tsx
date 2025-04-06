@@ -1,6 +1,8 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { ReactNode } from "react";
 
+import appStyles from "@/style.css?url";
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -13,8 +15,18 @@ export const Route = createRootRoute({
       },
       {
         title: "Tanstack Start Starter",
+      },
+      {
+        name: "description",
+        content: "Tanstack Start Starter",
       }
-    ]
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: appStyles,
+      },
+    ],
   }),
   component: RootComponent
 })
@@ -33,7 +45,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="bg-slate-900 text-slate-50">
         {children}
         <Scripts />
       </body>
