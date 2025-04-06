@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { PrismaClient } from '@prisma/client'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 
 const prisma = new PrismaClient()
@@ -17,11 +17,20 @@ export const Route = createFileRoute('/posts/')({
 })
 
 function RouteComponent() {
+	const router = useRouter()
 	const { posts } = Route.useLoaderData()
 
 	return (
 		<>
-			<Button>New Post</Button>
+			<Button
+				onClick={() =>
+					router.navigate({
+						to: '/posts/add',
+					})
+				}
+			>
+				Add Post
+			</Button>
 			{!posts.length && <p>No posts yet</p>}
 
 			<ul>
