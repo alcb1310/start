@@ -20,6 +20,15 @@ pnpm install
 pnpm dev
 ```
 
+## Deployment
+
+1. Create a netlify project and connect it to the repo
+2. Add the following enviroment variables
+
+    ```.env
+    DATABASE_URL="postgresql://<userame>:<password>@<host>:<port>/<database>?schema=public"
+    ```
+
 ## Styling solutions
 
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
