@@ -1,0 +1,18 @@
+{
+  "name": "start",
+  "version": "0.0.1",
+  "description": "Tanstack Start project demo",
+  "keywords": [
+    "tanstack",
+    "start",
+    "web",
+    "react"
+  ],
+  "license": "ISC",
+  "author": "Andres Court",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
