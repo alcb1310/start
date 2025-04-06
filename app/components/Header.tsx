@@ -6,6 +6,9 @@ export default function Header() {
 			<p className='font-bold'>
 				<Link to='/'>Home</Link>
 			</p>
+			<p className='font-bold'>
+				<Link to='/posts'>Post</Link>
+			</p>
 		</div>
 	)
 }
