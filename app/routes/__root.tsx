@@ -41,7 +41,10 @@ function RootComponent() {
 	return (
 		<RootDocument>
 			<Header />
-			<Outlet />
+
+			<div className='px-4'>
+				<Outlet />
+			</div>
 		</RootDocument>
 	)
 }
