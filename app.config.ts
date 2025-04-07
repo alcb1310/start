@@ -8,7 +8,6 @@ export default defineConfig({
 			tsConfigPaths({
 				projects: ['./tsconfig.json'],
 			}),
-			// @ts-expect-error
 			tailwindcss(),
 		],
 	},
