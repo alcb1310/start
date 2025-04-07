@@ -1,5 +1,13 @@
+import { Button } from '@/components/ui/button'
+import {
+	Card,
+	CardContent,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from '@/components/ui/card'
 import { PrismaClient } from '@prisma/client'
-import { createFileRoute, notFound } from '@tanstack/react-router'
+import { createFileRoute, notFound, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { z } from 'zod'
 
@@ -41,9 +49,31 @@ const getOnePost = createServerFn()
 	})
 
 function RouteComponent() {
-	const { id } = Route.useLoaderData()
+	const { post } = Route.useLoaderData()
+	const router = useRouter()
 
-	return <div>Hello /posts/{id}</div>
+	return (
+		<div className='w-full flex items-center justify-center'>
+			<Card className='w-1/2'>
+				<CardHeader className='text-center'>
+					<CardTitle>{post.title}</CardTitle>
+				</CardHeader>
+
+				<CardContent>
+					<p>{post.content}</p>
+				</CardContent>
+
+				<CardFooter>
+					<Button
+						onClick={() => router.navigate({ to: '/posts' })}
+						className='w-full'
+					>
+						Go Back
+					</Button>
+				</CardFooter>
+			</Card>
+		</div>
+	)
 }
 
 function NotFound() {
