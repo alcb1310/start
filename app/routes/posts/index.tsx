@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { PrismaClient } from '@prisma/client'
-import { createFileRoute, useRouter } from '@tanstack/react-router'
+import { createFileRoute, Link, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 
 const prisma = new PrismaClient()
@@ -33,9 +33,13 @@ function RouteComponent() {
 			</Button>
 			{!posts.length && <p>No posts yet</p>}
 
-			<ul>
+			<ul className='mt-3'>
 				{posts.map((post) => (
-					<li key={post.id}>{post.title}</li>
+					<li key={post.id}>
+						<Link to='/posts/$id' params={{ id: post.id }}>
+							{post.title}
+						</Link>
+					</li>
 				))}
 			</ul>
 		</>
