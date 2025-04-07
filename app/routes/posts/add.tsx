@@ -1,9 +1,27 @@
 import { useAppForm } from '@/hooks/form'
+import { PrismaClient } from '@prisma/client'
 import { createFileRoute } from '@tanstack/react-router'
+import { createServerFn } from '@tanstack/react-start'
+import { z } from 'zod'
+
+const prisma = new PrismaClient()
+
+const Post = z.object({
+	title: z.string(),
+	content: z.string().optional(),
+})
 
 export const Route = createFileRoute('/posts/add')({
 	component: RouteComponent,
 })
+
+const savePost = createServerFn({ method: 'POST' })
+	.validator((post: unknown) => {
+		return Post.parse(post)
+	})
+	.handler(async ({ data }) => {
+		return await prisma.post.create({ data })
+	})
 
 function RouteComponent() {
 	const form = useAppForm({
@@ -11,8 +29,12 @@ function RouteComponent() {
 			title: '',
 			content: '',
 		},
-		onSubmit: ({ value }) => {
-			console.log(value)
+		onSubmit: async ({ value }) => {
+			try {
+				await savePost({ data: value })
+			} catch (error) {
+				console.error(error)
+			}
 		},
 	})
 
