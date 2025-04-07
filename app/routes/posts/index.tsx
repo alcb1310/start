@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { PrismaClient } from '@prisma/client'
-import { createFileRoute, Link, useRouter } from '@tanstack/react-router'
+import { Link, createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 
 const prisma = new PrismaClient()
